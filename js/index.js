@@ -314,7 +314,7 @@ function startWork() {
             if (!images[i].complete) {
                 result = false;
             } else {
-                if (i >= index) {
+                if (i > index) {
                     index = i;
                     const load = (i + 1) / images.length * 100;
                     document.querySelector('.loader-line').style.width = `${load}%`;
