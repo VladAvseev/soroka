@@ -32,6 +32,20 @@ span { font-size: 40px; }
     background: #dd3434;
 }
 
+.loader-wrapper {
+    width: 300px;
+    height: 20px;
+    margin: 300px auto;
+    border: 2px black solid;
+    background: #fff;
+}
+
+.loader-line {
+    width: 0%;
+    height: 100%;
+    background: green;
+}
+
 /*Container
 ========================================*/
 .container {
