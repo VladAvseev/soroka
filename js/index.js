@@ -306,12 +306,18 @@ function render() {
 
 function startWork() {
     render();
+    let index = 0;
     const images = document.querySelectorAll('img');
     let imgInterval = setInterval(() => {
         let result = true
         for (let i = 0; i < images.length; i++) {
             if (!images[i].complete) {
                 result = false;
+                const load = i / images.length * 100;
+                document.querySelector('.loader-line').style.width = `${load}%`;
+                console.log(`${load}%`);
+            } else if (i >= index){
+                index++;
                 const load = i / images.length * 100;
                 document.querySelector('.loader-line').style.width = `${load}%`;
                 console.log(`${load}%`);
