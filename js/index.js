@@ -312,9 +312,10 @@ function startWork() {
         for (let i = 0; i < images.length; i++) {
             if (!images[i].complete) {
                 result = false;
+                const load = i / images.length * 100;
+                document.querySelector('.loader-line').style.width = `${load}%`;
+                console.log(`${load}%`);
             }
-            console.log(`картинка ${images[i].complete}`)
-            console.log(`результат ${result}`)
         }
         if (result) {
             clearInterval(imgInterval);
