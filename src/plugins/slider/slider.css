@@ -1,0 +1,9 @@
+.slider-container {
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: 1s;
+}
+
